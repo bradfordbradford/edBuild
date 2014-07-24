@@ -1,0 +1,251 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900,300italic|Raleway);
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  line-height: $base-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+
+
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  font-weight: 900;
+}
+
+h1 {
+  font-size: $base-font-size * 2.425;
+  text-transform: uppercase;
+  line-height: 1.25em;
+  letter-spacing: 0.125em;
+  word-spacing: 0.125em;
+}
+
+h2 {
+  font-size: $base-font-size * 3.125;
+  font-weight: 300;
+  line-height: 1.15em;
+  letter-spacing: 0.115em;
+  word-spacing: 0.125em;
+}
+
+h3 {
+  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+}
+
+h4 {
+  font-size: $base-font-size * 1.25; // 16 * 1.5 = 24px
+  line-height: 1em;
+  letter-spacing: 0.025em;
+  word-spacing: 0.025em;
+
+}
+
+h5 {
+  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+}
+
+h6 {
+  font-size: $base-font-size;
+}
+
+p {
+  font-size: $base-font-size * 1.875;
+  margin: 0 0 ($base-font-size * 1.875); //
+  line-height: 1.325em;
+  font-weight: 300;
+  letter-spacing: 0.03125em;
+  word-spacing: 0.03125em;
+
+  &.lead {
+    color: $yellow-1 !important;
+  }
+
+}
+
+.center {
+  text-align: center;
+}
+
+// General Links
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+// Content Headers
+.content-header {
+  h2 {
+    font-family: $main-font;
+    font-size: $base-font-size * 2.75; // 44px
+  }
+  .options {
+    margin-top: 12px;
+  }
+}
+
+// Article Content Typography
+.content-article {
+  @include clearfix;
+  text-align: left;
+
+  // Lists
+  ul {
+    margin: 0 auto ($base-line-height * .5);
+    li {
+      list-style-type: disc;
+      margin-left: 32px;
+      line-height: $base-line-height;
+    }
+  }
+  ol {
+    margin: 0 auto ($base-line-height * .5);
+    li {
+      list-style: decimal;
+      margin-left: 32px;
+      line-height: $base-line-height;
+    }
+  }
+
+  // Article Type
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $main-font;
+    font-size: .7em;
+    font-weight: 700;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  // Date
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $main-font;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  // Links
+  a:not(.btn) {
+    font-weight: 800;
+    color:$secondary-link-color;
+    &:hover {
+      color:$secondary-link-hover-color;
+    }
+  }
+
+  // Paragraphs
+  p {
+    font-family: $main-font;
+    // Strong Copy
+    span {
+      font-family: $main-font;
+      font-weight: 700;
+    }
+    // Read More
+    a.read-more {
+    display: inline-block;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+      span {
+        font-family: $main-font;
+        font-style: normal;
+        position: absolute;
+        font-size: 1.5em;
+        top: -1px;
+        right: -12px;
+      }
+    }
+    // Author
+    &.author {
+      font-family: $main-font;
+      font-style: italic;
+    }
+  }
+}
+
+// Verse Numbers
+.verse-num {
+  vertical-align: super;
+  font-size: .65em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+// Detail/Meta
+.meta {
+  font-size: .8em;
+  display: block;
+  margin: 0 auto;
+}
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-line-height 0;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $base-border-color;
+  cursor: help;
+}
+
+address {
+  display: block;
+  margin: 0 0 ($base-line-height / 2);
+}
+
+hgroup {
+  margin-bottom: $base-line-height / 2;
+}
+
+del {
+  color: lighten($base-font-color, 15);
+}
+
+blockquote {
+  border-left: 2px solid $base-border-color;
+  color: lighten($base-font-color, 15);
+  margin: $base-line-height 0;
+  padding-left: $base-line-height / 2;
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+  margin-bottom: ($base-line-height * .5);
+  display: block;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}

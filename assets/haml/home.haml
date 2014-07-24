@@ -1,0 +1,194 @@
+!!! 5
+%html.no-js{:lang => "en"}
+
+    %head
+
+        %meta{:charset => "utf-8", :"http-equiv"=>"Content-Type", :content=>"text/html"}
+
+        %title edBuild
+        %meta{:name => "description", :content => ""}
+        %meta{:name => "keywords", :content => ""}
+        %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+        -# Favicon
+        / %link{:href => "../img/icons/favicon.ico", :rel => "shortcut icon"}
+
+
+        -# CSS
+        %link{:rel => "stylesheet", :href => "../css/app.css"}
+
+        -# Modernizr
+        %script{:src => "../js/min/modernizr.min.js"}
+
+        -# IE LT 9
+            <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/ie8.css" /><script src='../js/min/ie.min.js'></script><![endif]-->
+
+
+
+    %body.init
+
+
+        %section#question{:'data-0'=>'transform:translate3d(0,0%, 0);', :'data-top-bottom'=>'transform:translate3d(0, 15%, 0);'}
+            .bounds
+                %p.lead Which do we address first?
+                %h1
+                    %span.animate-block-1
+                        poverty
+                    %em.animate-block-2
+                        or
+                    %span.animate-block-3
+                        education
+
+                .scroll-prompt
+                    %small scroll down to learn more
+                    .icon{:'data-icon'=>'a'}
+
+            .content-background
+
+        %section#philosophy
+            .bounds
+                %h1.fadeOn-one
+                    We believe longterm solutions
+                    %br/
+                    will address both
+
+                %p.lead.fadeOn-two EdBuild was created to rethink schools and rebuild communities.
+
+                %p
+                    We explore the intersection of education reform and economic development,
+                    and we provide tangible solutions that support the revitalization of states,
+                    cities, and school districts.
+
+                %p.fadeOn-three
+                    %strong
+                        We are EdBuild. Let's rebuild the future.
+
+
+
+        %section#problem
+            .bounds
+                %h2.fadeOn-one
+                    When neighborhoods suffer,
+                    %br/
+                    schools fail.
+
+
+                %h2.fadeOn-two
+                    And when schools fail,
+                    %br/
+                    neighborhoods suffer.
+
+            .content-background{:'data-500'=>'transform:translate3d(0, 0px, 0);', :'data-top-bottom'=>'transform:translate3d(0, -200px, 0);'}
+
+
+        %section#approach-1
+            .bounds
+                %p.center
+                    %strong
+                        To address this cycle, our work focuses on three key areas where economic development and education reform intersect.
+
+                .content-row.col-ten.col-center
+                    .card
+                        .icon-gear{:'data-icon'=>'g'}
+                        %h4.title Infrastructure
+                        %p
+                            We believe that rightsizing building portfolios and providing charter schools with development incentives can bring more resources to districts and communities while increasing quality school options for families.
+
+                    .card
+                        .icon-gear{:'data-icon'=>'g'}
+                        %h4.title Workforce
+                        %p
+                            We believe that smart compensation and pension systems will attract and retain the best teachers to inspire students in struggling schools and contribute to the local economy by living in the neighborhoods in which they teach.
+
+
+                    .card
+                        .icon-gear{:'data-icon'=>'g'}
+                        %h4.title Resources
+                        %p
+                            We believe that adequate funding and efficient spending can spur innovation and ensure every public school student has the resources they need to succeed.
+
+
+
+
+        %section#approach-2
+            .bounds
+                %p
+                    %strong
+                        Our three-tiered approach will help leaders at every level, from district superintendents to governors.
+
+
+
+        %section#approach-3
+
+            %ul.highlights-list
+                %li.highlight-one
+                    .icon-container.col-one
+                        .icon{:'data-icon'=>'h'}
+                    .copy-container.col-eight
+                        %h1 Drive New Thinking
+                        %p
+                            Through the compilation of data, the encouragement of discourse and debate, and the development of innovative new communications strategies.
+
+                %li.highlight-two
+                    .icon-container.col-one
+                        .icon{:'data-icon'=>'e'}
+                    .copy-container.col-eight
+                        %h1 Reveal Pathways for Change
+                        %p
+                            By tracking emerging research, and partnering with respected peers to support the pursuit of evidence in these areas.
+                %li.highlight-three
+                    .icon-container.col-one
+                        .icon{:'data-icon'=>'f'}
+                    .copy-container.col-eight
+                        %h1 Implement Innovation
+                        %p
+                            By building actionable data-based models, and guiding stakeholders through the implementation of new and innovative strategies – every step of the way.
+
+        %section#contact{:role => "contentinfo"}
+            .bounds
+                %p.lead.fadeUp-one
+                    %strong
+                        It's time to Rebuild the Promise of The American Dream.
+
+                %h1.fadeUp-two
+                    It's time to rethink schools &amp; rebuild our communities.
+                .logo-wrap.fadeOn-three
+                    %img{:src => "../img/logos/logo+@2x.png", :alt => "edbuild"}/
+
+
+                %p
+                    Drop us a line sometime at
+                    %a{:href => "mailto:contact@edbuild.org"}
+                        contact@edbuild.org
+
+
+
+
+
+
+
+
+
+
+        -# Scripts
+        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+        // window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>')
+        %script{:src => "../js/min/sitescripts.min.js"}
+        %script{:src => "../js/min/app.min.js"}
+
+
+
+        -# Google Analytics
+            %script
+                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+
+
+

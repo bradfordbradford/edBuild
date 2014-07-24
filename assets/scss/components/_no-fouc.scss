@@ -1,0 +1,33 @@
+
+// Variables
+$white-1                        :                       #eeeeee; // dark white
+
+html.opacity{
+    body section .content-background {
+        @include opacity(0);
+        @include transition(opacity .3s ease-in-out);
+    }
+    body.ready section .content-background {
+        @include opacity(1);
+    }
+}
+
+// Pace
+.pace .pace-progress {
+  background: $white-1;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+.pace-inactive {
+  display: none;
+}
+

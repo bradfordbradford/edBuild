@@ -1,0 +1,137 @@
+
+.init * {
+  @include transition(none !important);
+}
+
+// QUESTION
+////////////////////////////////////////////////////
+#question {
+  h1 .animate-block-1 {
+    @include opacity(0);
+    @include animation(fadeInUp 1000ms ease-in-out 1s);
+    @include animation-fill-mode(forwards);
+  }
+  h1 .animate-block-2 {
+    @include opacity(0);
+    @include animation(fadeIn 2000ms ease-in-out 1s);
+    @include animation-fill-mode(forwards);
+  }
+  h1 .animate-block-3 {
+    @include opacity(0);
+    @include animation(fadeInUp 1000ms ease-in-out 1.5s);
+    @include animation-fill-mode(forwards);
+  }
+  .scroll-prompt {
+    .icon {
+      @include opacity(.4);
+      @include animation(fadeInOut 1500ms ease-in-out 4 1.75s);
+      @include animation-fill-mode(forwards);
+    }
+    small {
+      @include opacity(.4);
+      @include animation(fadeInOut 1500ms ease-in-out 4 1.55s);
+      @include animation-fill-mode(forwards);
+    }
+  }
+}
+
+
+// CARDS
+////////////////////////////////////////////////////
+.card:hover .icon-gear{
+  @include animation(spin 1400ms linear infinite);
+}
+
+// CONTACT
+////////////////////////////////////////////////////
+
+.fadeUp-one,
+.fadeUp-two,
+.fadeOn-one,
+.fadeOn-two,
+.fadeOn-three{
+  @include opacity(0);
+  @include transition(opacity .3s ease-in-out);
+}
+
+section.active {
+  .fadeUp-one {
+    @include animation(fadeInUp 600ms ease-in-out);
+    @include animation-fill-mode(forwards);
+  }
+  .fadeUp-two {
+    @include animation(fadeInUp 1000ms ease-in-out 800ms);
+    @include animation-fill-mode(forwards);
+  }
+  .fadeOn-one {
+    @include animation(fadeIn 600ms ease-in-out);
+    @include animation-fill-mode(forwards);
+  }
+  .fadeOn-two {
+    @include animation(fadeIn 1000ms ease-in-out 800ms);
+    @include animation-fill-mode(forwards);
+  }
+  .fadeOn-three {
+    @include animation(fadeIn 1000ms ease-in-out 1600ms);
+    @include animation-fill-mode(forwards);
+  }
+
+}
+
+
+
+
+
+
+
+// Spin Animation
+////////////////////////////////////////////////////////////////////
+@include keyframes(spin) {
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+
+
+// Fade In Up Animation
+////////////////////////////////////////////////////////////////////
+@include keyframes(fadeInUp) {
+  0% {
+    @include opacity(0);
+    @include transform(translate3d(0, 100%, 0));
+  }
+  100% {
+    @include transform(none);
+    @include opacity(1);
+  }
+}
+
+
+// Fade In Animation
+////////////////////////////////////////////////////////////////////
+@include keyframes(fadeIn) {
+  0% {
+    @include opacity(0);
+  }
+  100% {
+    @include opacity(1);
+  }
+}
+
+
+// Shake Up & Down Animation
+////////////////////////////////////////////////////////////////////
+@include keyframes(fadeInOut) {
+  0% {
+    @include opacity(.4);
+  }
+  50% {
+    @include opacity(1);
+  }
+  100% {
+    @include opacity(.4);
+  }
+}
+
+

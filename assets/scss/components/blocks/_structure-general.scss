@@ -1,0 +1,362 @@
+
+// Structure: General //
+html, body {
+    background: $base-body-color;
+    height: 100%;
+}
+body {
+    overflow-x: hidden;
+}
+.content-row {
+    @include row();
+}
+.bounds {
+    @include outer-container();
+    padding: 0 $gutter;
+}
+section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: ($base-line-height*4) $base-line-height ($base-line-height*2);
+}
+
+// Mixins: Section Colors/Backgrounds //
+// Blue Panels
+@mixin blue-2-panel {
+    background: $blue-2;
+    color: $blue-4;
+
+    h1,h2,h3,h4,p {
+        color: $blue-4;
+    }
+}
+
+@mixin blue-4-panel {
+    background: $blue-4;
+    color: $blue-2;
+
+    h1,h2,h3,h4,p {
+        color: $blue-2;
+    }
+}
+
+
+// White Panel
+@mixin white-2-panel {
+    background: $white-2;
+    color: $blue-2;
+
+    h1,h2,h3,h4,p {
+        color: $blue-1;
+    }
+}
+
+
+@mixin white-3-panel {
+    background: $white-3;
+    color: $blue-2;
+
+    h1,h2,h3,h4,p {
+        color: $blue-2;
+    }
+}
+
+// Black Panel
+@mixin black-1-panel {
+    background: $black-1;
+    color: $white-1;
+
+    h1,h2,h3,h4,p {
+        color: $white-1;
+    }
+}
+
+
+// Structure: Sections //
+section#question {
+    // height: 100%;
+    padding-bottom: 0;
+    // background: url('../img/content/desk.jpg') no-repeat top center;
+    // background-size: cover;
+    text-align: center;
+    border-bottom: 1px solid darken($blue-2, 30);
+
+    .content-background {
+        @include transition(opacity .3s ease-in-out);
+        background: url('../img/content/desk.jpg') no-repeat top center;
+        background-size: cover;
+        min-height: 700px;
+        position: absolute;
+        height:100%;
+        width: 100%;
+        z-index: 0;
+        top:0;
+        left:0;
+    }
+
+    .bounds {
+        position: relative;
+        z-index: 10;
+    }
+
+    span, em {
+        display: inline-block;
+    }
+
+    h1 {
+        color: $white-2;
+
+        em {
+            font-size: 0.6em;
+            text-transform: none;
+            position: relative;
+            top: -12px;
+            letter-spacing: .012em;
+            padding: 0 16px;
+        }
+    }
+    .scroll-prompt {
+        color: $white-2;
+        margin: 330px auto 52px;
+        @include transition(transform .3s ease-in-out, opacity .3s ease-in-out);
+        small {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.63em;
+        }
+        .icon {
+            display: block;
+            cursor:pointer;
+            font-size: 1.5em;
+        }
+
+        &:hover {
+            @include transform(translate3d(0,4px, 0));
+
+        }
+    }
+}
+
+section#philosophy {
+    // height: 100%;
+    @include blue-2-panel;
+}
+
+section#problem {
+    // height: 100%;
+    padding: 8em 1.5em 1em;
+    min-height: 700px;
+    @include black-1-panel;
+    text-align: center;
+    border-top: 1px solid $black-1;
+    border-bottom: 1px solid $black-1;
+    z-index: 10;
+    position: relative;
+
+    .bounds {
+        z-index: 10;
+        position: relative;
+    }
+
+    .content-background {
+        @include transition(transition .3s ease-in-);
+        background: url('../img/content/city.jpg') no-repeat top center;
+        background-size: cover;
+        min-height: 700px;
+        position: absolute;
+        height:900px;
+        width: 100%;
+        z-index: 0;
+        top:0;
+        left:0;
+    }
+
+    h2 {font-weight: 400;}
+}
+
+section#approach-1 {
+    // height: 100%;
+    @include blue-4-panel;
+    padding-bottom: 4em;
+    z-index: 10;
+}
+
+section#approach-2 {
+    @include white-3-panel;
+    text-align: center;
+    border-top: 1px solid darken($blue-4, 4);
+    border-bottom: 1px solid $blue-4;
+}
+
+section#approach-3 {
+    // height: 100%;
+    padding: 0;
+    @include clearfix;
+    background: lighten($blue-4, 50);
+}
+
+section#contact {
+    // height: 100%;
+    @include blue-2-panel;
+    .logo-wrap {
+        width: 200px;
+        img {
+            margin: ($base-line-height * 6) 0 ($base-line-height * 2);
+        }
+    }
+}
+
+
+// Structure: Lists //
+ul.highlights-list {
+    li {
+        padding:1.5em 0 3em;
+        @include clearfix;
+        border-bottom: 1px solid $blue-4;
+        position: relative;
+        @include transition(transform .3s ease-in-out);
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            // @include span-columns(1);
+            width: 11.17215%;
+            left: -3.17215%;
+            height: 100%;
+            top:0;
+            // left:0;
+        }
+
+        .icon {
+            font-size: 4em;
+            position: relative;
+            top: 24px;
+            left: 12px;
+        }
+
+        p {
+            font-size: $base-font-size;
+            margin: $base-line-height/3 auto $base-line-height/2;
+            font-size: $base-font-size * 1.25;
+            line-height: 1.125em;
+            letter-spacing: 0.0125em;
+            word-spacing: 0.0125em;
+        }
+        .icon-container {
+            @include shift(1);
+        }
+
+        h1,p,.icon {
+            @include transition(transform .3s ease-in-out, opacity .3s ease-in-out);
+        }
+
+        h1,p,.icon {
+            @include opacity(.8);
+        }
+        // .icon-container img {
+        //     width: 70%;
+        //     margin: 0 auto;
+        //     position: relative;
+        //     top: 40px;
+        // }
+
+
+        &:hover {
+            @include transform(translate3d(3.17215%,0px, 0));
+            .icon {
+                @include transform(translate3d(20.17215%, 0px, 0));
+            }
+            h1,p {
+                @include opacity(1);
+                @include transform(translate3d(1.17215%,0px, 0));
+            }
+        }
+
+
+        &.highlight-one {
+            &:before {
+                background: $blue-1;
+                border-bottom: $blue-1 1px solid;
+            }
+
+        }
+        &.highlight-two {
+            &:before {
+                background: $blue-2;
+                border-bottom: $blue-2 1px solid;
+            }
+        }
+        &.highlight-three {
+            &:before {
+                background: $blue-3;
+            }
+            // .icon-container img {
+            //     width: 60%;
+            //     top: 48px;
+            // }
+
+        }
+    }
+}
+
+
+// Structure: Cards //
+.card {
+    background: transparentize($white-2, .1);
+    @include transition(all .3s ease-in-out);
+    color: $blue-1;
+    border: 1px solid darken($white-3, 10);
+    @include border-right-radius(6px);
+    @include border-left-radius(6px);
+    @include span-columns(4);
+    padding: 20px 30px 24px;
+    min-height: 390px;
+
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        margin: .875em auto 1.45em;
+    }
+    p {
+        font-size: $base-font-size;
+        margin: $base-line-height/3 auto $base-line-height/2;
+
+    }
+    &:hover {
+        background: $white-2;
+        border: 1px solid darken($white-3, 20);
+        box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.1);
+        cursor: help;
+    }
+}
+// Icons
+.icon-gear {
+    @include transition(background .4s ease-in-out, border .4s ease-in-out, color .1s ease-in-out);
+    font-size: 3.6em;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    color: $yellow-1;
+    border: 3px solid $yellow-1;
+    &:before {
+        position: relative;
+        left: 0px;
+        top: 3px;
+    }
+}
+
+// Card Hover
+.card:hover .icon-gear {
+    border-color: $blue-2;
+    background: $blue-2;
+    color: $white-2;
+}

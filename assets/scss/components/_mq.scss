@@ -1,0 +1,136 @@
+// MEDIA QUERIES
+/////////////////////////////////////////////////////////
+
+
+
+// 1176
+/////////////////////////////////////////////////////////
+@include media($adjust-background-size) {
+    // Section
+    section {
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    // Problem
+    section#problem {
+        background-size: inherit;
+        min-height: inherit;
+        padding-bottom: 8em;
+    }
+
+
+}
+
+// LANDSCAPE
+/////////////////////////////////////////////////////////
+@include media($ipad-landscape-down) {
+    // Cards
+    .card {
+        @include fullBleed;
+        min-height: auto;
+        margin: $base-line-height auto;
+    }
+
+}
+
+
+// PORTRAIT
+/////////////////////////////////////////////////////////
+@include media($ipad-portrait-down) {
+
+    // Utility Hide/Show
+    .hide-on-tablet {
+        display: none !important;
+    }
+    .show-on-tablet {
+        display: inherit !important;
+    }
+
+
+
+     // Question
+    section#question h1 em {
+        display: block;
+        margin: 1em auto .5em;
+    }
+
+
+
+    // Approach Highlights
+    ul.highlights-list {
+        li {
+            text-align: center;
+            .icon-container {
+                margin: auto;
+                text-align: center;
+                img {
+                    width: auto !important;
+                    margin-bottom: $base-line-height;
+                }
+            }
+            .copy-container {
+                padding: 0 3em;
+            }
+        }
+    }
+
+    // Utility Grid
+    .col-one,
+    .col-two,
+    .col-three,
+    .col-four,
+    .col-five,
+    .col-six,
+    .col-seven,
+    .col-eight,
+    .col-nine,
+    .col-ten,
+    .col-eleven,
+    .col-twelve{
+        @include fullBleed;
+        margin: $base-line-height auto;
+    }
+
+
+
+}
+
+
+@include media($phone-down) {
+    // Typography
+    h1 {
+      font-size: $base-font-size * 2; // 16 * 2 = 32px
+    }
+
+    h2 {
+      font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+    }
+
+    h3 {
+      font-size: $base-font-size * 1.25; // 16 * 1.125 = 20px
+    }
+
+    h4 {
+      font-size: $base-font-size * 1.125; // 16 * 1.125 = 18px
+    }
+
+    h5 {
+      font-size: $base-font-size; // 16
+    }
+
+    h6 {
+      font-size: $base-font-size; // 16
+    }
+
+    p {
+      margin: 0 0 ($base-line-height * .5);
+
+      // Lead Copy
+      &.lead {
+        font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+        line-height: 1.25em;
+        color: $blue-1;
+      }
+    }
+}

@@ -1,0 +1,54 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$main-font: "lato", $helvetica;
+$aux-font: "railway", $georgia;
+
+$base-font-family: $main-font;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+$secondary-border-radius: em(6);
+$navbarHeight: 48px;
+$siteHeaderHeight: 88px;
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+$black-1                        :                       #212121; // darkest
+$white-1                        :                       #eeeeee; // dark white
+$white-3                        :                       #F7FAFB; // warm white
+$white-2                        :                       #ffffff; // whitest
+$blue-1                         :                       #056575; // darkest
+$blue-2                         :                       #6C9AA9; // darker
+$blue-3                         :                       #9EC7D2; // light
+$blue-4                         :                       #DDECF5; // lightest
+$blue-5                         :                       #A7B7C0; // neutral
+$yellow-1                       :                       #E6E5AC; // highlight
+
+
+// Body Color
+$base-body-color: $blue-2;
+// lighten($blue-4, 50)
+
+//  Font Colors
+$base-font-color: $blue-1;
+$base-accent-color: $blue-1;
+
+//  Text Link Colors
+$base-link-color: $yellow-1;
+$hover-link-color: darken($yellow-1, 8);
+
+$secondary-link-color: $blue-1;
+$secondary-link-hover-color: darken($blue-1, 8);
+
+
+// Border color
+$base-border-color: $blue-4;
+
+// Flash Colors
+$error-color: $blue-2;
+$notice-color: $yellow-1;
+$success-color: $blue-2;
