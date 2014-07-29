@@ -19,29 +19,4 @@ $(document).ready(function($) {
     });
 
 
-    // SKROLLR
-    /////////////////////////////////////////////////////////
-    var s = skrollr.init();
-
-    // POINTS
-    /////////////////////////////////////////////////////////
-
-    $('section').waypoint(function(direction) {
-    var active_section;
-    active_section = $(this);
-      if (direction == 'down') {
-              active_section.addClass("active");
-    }
-    // if (direction == 'up') {
-    //   active_section.removeClass("active");
-    // };
-    },
-    {
-      offset: function() {
-              return $.waypoints('viewportHeight') - $(this).height() + 260;
-    }
-    });
-
-
-
 });

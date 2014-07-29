@@ -19,19 +19,52 @@
         padding-bottom: 8em;
     }
 
-
 }
+
 
 // LANDSCAPE
 /////////////////////////////////////////////////////////
-@include media($ipad-landscape-down) {
+// @include media($ipad-landscape-down) {
+//     h4 {
+//         font-size: 1em;
+//     }
+// }
+
+
+// // ADJUST GRID/TYPE
+// /////////////////////////////////////////////////////////
+@include media($adjust-grid-down) {
     // Cards
     .card {
-        @include fullBleed;
-        min-height: auto;
-        margin: $base-line-height auto;
+        display: block;
+        float: none;
+        width: 300px;
+        min-height: inherit;
+        margin: $base-line-height auto !important;
+    }
+    // Type
+    h2 {
+        font-size: 2.5em;
     }
 
+    // Highlights
+    ul.highlights-list li {
+        .icon-container {
+            margin-left: 9.5298%;
+        }
+        .col-one {
+            width: 8.17215%;
+        }
+        .icon {
+            font-size: 3em;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
 }
 
 
@@ -47,32 +80,42 @@
         display: inherit !important;
     }
 
+    // Type
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
 
+    // Highlights
+    ul.highlights-list li {
+        text-align: center;
+        .icon-container {
+            margin: auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.25em;
+        }
+        .copy-container {
+            padding: 1em 1.5em 1em 3em;
+        }
+        .icon {
+            left:0;
+        }
+    }
+    p {
+        font-size: 1em;
+    }
 
-     // Question
+    // Question
     section#question h1 em {
         display: block;
         margin: 1em auto .5em;
-    }
-
-
-
-    // Approach Highlights
-    ul.highlights-list {
-        li {
-            text-align: center;
-            .icon-container {
-                margin: auto;
-                text-align: center;
-                img {
-                    width: auto !important;
-                    margin-bottom: $base-line-height;
-                }
-            }
-            .copy-container {
-                padding: 0 3em;
-            }
-        }
     }
 
     // Utility Grid
@@ -96,41 +139,47 @@
 
 }
 
+// TOUCH
+//////////////////////////////////////////
+.touch {
+    // Fades
+    .fadeUp-one,
+    .fadeUp-two,
+    .fadeOn-one,
+    .fadeOn-two,
+    .fadeOn-three{
+      @include opacity(1);
+    }
+}
+
 
 @include media($phone-down) {
-    // Typography
-    h1 {
-      font-size: $base-font-size * 2; // 16 * 2 = 32px
+    // Cards
+    .card {
+        width: auto;
     }
 
-    h2 {
-      font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+    // Sections
+    section {
+        padding:3em .5em 3em;
     }
 
-    h3 {
-      font-size: $base-font-size * 1.25; // 16 * 1.125 = 20px
+    // Question
+    section#question {
+        h1 em {
+            padding-bottom:0;
+        }
+        .scroll-prompt {
+            margin-top: 4em;
+        }
+        .content-background {
+            min-height: inherit;
+        }
     }
 
-    h4 {
-      font-size: $base-font-size * 1.125; // 16 * 1.125 = 18px
+    // Problem
+    section#problem {
+        padding: 5em .25em;
     }
 
-    h5 {
-      font-size: $base-font-size; // 16
-    }
-
-    h6 {
-      font-size: $base-font-size; // 16
-    }
-
-    p {
-      margin: 0 0 ($base-line-height * .5);
-
-      // Lead Copy
-      &.lead {
-        font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
-        line-height: 1.25em;
-        color: $blue-1;
-      }
-    }
 }

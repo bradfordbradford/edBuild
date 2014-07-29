@@ -188,6 +188,9 @@ section#approach-2 {
     text-align: center;
     border-top: 1px solid darken($blue-4, 4);
     border-bottom: 1px solid $blue-4;
+    p {
+        margin-bottom: 0;
+    }
 }
 
 section#approach-3 {
@@ -210,6 +213,18 @@ section#contact {
 
 
 // Structure: Lists //
+@include media($ipad-landscape-up) {
+    ul.highlights-list li:hover {
+        @include transform(translate3d(3.17215%,0px, 0));
+        .icon {
+            @include transform(translate3d(20.17215%, 0px, 0));
+        }
+        h1,p {
+            @include opacity(1);
+            @include transform(translate3d(1.17215%,0px, 0));
+        }
+    }
+}
 ul.highlights-list {
     li {
         padding:1.5em 0 3em;
@@ -259,24 +274,6 @@ ul.highlights-list {
         h1,p,.icon {
             @include opacity(.8);
         }
-        // .icon-container img {
-        //     width: 70%;
-        //     margin: 0 auto;
-        //     position: relative;
-        //     top: 40px;
-        // }
-
-
-        &:hover {
-            @include transform(translate3d(3.17215%,0px, 0));
-            .icon {
-                @include transform(translate3d(20.17215%, 0px, 0));
-            }
-            h1,p {
-                @include opacity(1);
-                @include transform(translate3d(1.17215%,0px, 0));
-            }
-        }
 
 
         &.highlight-one {
@@ -296,10 +293,6 @@ ul.highlights-list {
             &:before {
                 background: $blue-3;
             }
-            // .icon-container img {
-            //     width: 60%;
-            //     top: 48px;
-            // }
 
         }
     }

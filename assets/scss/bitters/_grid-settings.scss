@@ -9,11 +9,14 @@ $max-width: em(1140);
 ///////////////////////////////////////////////////////////////////////////////
 $laptop: em(1224);
 $adjust-background-size: em(1176);
-$ipad-landscape: em(768);
+$adjust-grid: em(1000);
+$ipad-landscape: em(769);
 $ipad-portrait: em(674);
 $phone: em(480);
 
 $adjust-background-size: new-breakpoint(max-width $adjust-background-size);
+$adjust-grid-down: new-breakpoint(max-width $adjust-grid);
+$ipad-landscape-up: new-breakpoint(min-width $ipad-landscape 4);
 $ipad-landscape-down: new-breakpoint(max-width $ipad-landscape 4);
 $ipad-portrait-down: new-breakpoint(max-width $ipad-portrait 4);
 $phone-down: new-breakpoint(max-width $phone 1);
