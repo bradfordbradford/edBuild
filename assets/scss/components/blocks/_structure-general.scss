@@ -18,6 +18,7 @@ section {
     position: relative;
     overflow: hidden;
     width: 100%;
+    min-height:768px;
     padding: ($base-line-height*4) $base-line-height ($base-line-height*2);
 }
 
@@ -177,13 +178,13 @@ section#problem {
 }
 
 section#approach-1 {
-    // height: 100%;
     @include blue-4-panel;
     padding-bottom: 4em;
     z-index: 10;
 }
 
 section#approach-2 {
+    min-height: inherit;
     @include white-3-panel;
     text-align: center;
     border-top: 1px solid darken($blue-4, 4);
@@ -192,10 +193,13 @@ section#approach-2 {
     p {
         margin-bottom: 0;
     }
+    hr {
+        margin: 100px auto;
+    }
 }
 
 section#approach-3 {
-    // height: 100%;
+    min-height: inherit;
     padding: 0;
     @include clearfix;
     background: lighten($blue-4, 50);
@@ -205,7 +209,7 @@ section#contact {
     // height: 100%;
     @include blue-2-panel;
     .logo-wrap {
-        width: 200px;
+        width: 300px;
         img {
             margin: ($base-line-height * 6) 0 ($base-line-height * 2);
         }
@@ -310,7 +314,7 @@ ul.highlights-list {
     @include border-left-radius(6px);
     @include span-columns(4);
     padding: 20px 30px 24px;
-    min-height: 390px;
+    min-height: 410px;
 
     .title {
         text-align: center;
@@ -318,6 +322,7 @@ ul.highlights-list {
         margin: .875em auto 1.45em;
     }
     p {
+        text-align: center;
         font-size: $base-font-size;
         margin: $base-line-height/3 auto $base-line-height/2;
 
@@ -326,13 +331,13 @@ ul.highlights-list {
         background: $white-2;
         border: 1px solid darken($white-3, 20);
         box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.1);
-        cursor: help;
+        cursor: pointer;
     }
 }
 // Icons
 .icon-gear {
     @include transition(background .4s ease-in-out, border .4s ease-in-out, color .1s ease-in-out);
-    font-size: 3.6em;
+    font-size: 58px;
     text-align: center;
     margin: 0 auto;
     position: relative;

@@ -49,6 +49,8 @@
 .fadeUp-two,
 .fadeOn-one,
 .fadeOn-two,
+.fadeOn-one-slow,
+.fadeOn-two-slow,
 .fadeOn-three{
   @include opacity(0);
   @include transition(opacity .3s ease-in-out);
@@ -69,6 +71,14 @@ section.active {
   }
   .fadeOn-two {
     @include animation(fadeIn 1000ms ease-in-out 800ms);
+    @include animation-fill-mode(forwards);
+  }
+  .fadeOn-one-slow {
+    @include animation(fadeIn 800ms ease-in-out);
+    @include animation-fill-mode(forwards);
+  }
+  .fadeOn-two-slow {
+    @include animation(fadeIn 1200ms ease-in-out 1000ms);
     @include animation-fill-mode(forwards);
   }
   .fadeOn-three {
