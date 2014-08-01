@@ -14,166 +14,174 @@
     <script src='../js/min/modernizr.min.js'></script>
   </head>
   <body class='init'>
-    <section data-0='transform:translate3d(0,0%, 0);' data-top-bottom='transform:translate3d(0, 15%, 0);' id='question'>
-      <div class='bounds'>
-        <p class='lead'>Which do we address first?</p>
-        <h1>
-          <span class='animate-block-1'>
-            poverty
-          </span>
-          <em class='animate-block-2'>
-            or
-          </em>
-          <span class='animate-block-3'>
-            education
-          </span>
-        </h1>
-        <div class='scroll-prompt'>
-          <small>scroll down to learn more</small>
-          <div class='icon' data-icon='a'></div>
+    <nav id='cycle-sections' class="hide-on-tablet">
+      <div class='icon' data-icon='a' id='prev'></div>
+      <div class='icon' data-icon='a' id='next'></div>
+      <small>learn more</small>
+    </nav>
+    <main id='main-content'>
+      <section class='active_section' id='question'>
+        <div class='bounds' data-0='opacity:1' data-top-bottom='opacity:0' >
+          <p class='lead'>Which do we address first?</p>
+          <h1>
+            <span class='animate-block-1'>
+              poverty
+            </span>
+            <em class='animate-block-2'>
+              or
+            </em>
+            <span class='animate-block-3'>
+              education
+            </span>
+          </h1>
         </div>
-      </div>
-      <div class='content-background'></div>
-    </section>
-    <section id='philosophy'>
-      <div class='bounds'>
-        <h1 class='fadeOn-one'>
-          To benefit the children who need help the most,
-          we believe the best solutions must address both concurrently.
-        </h1>
-        <p class='lead fadeOn-two'>EdBuild was created to rethink schools and rebuild communities.</p>
-        <p>
-          Our team focuses on the needs of children in their schools and the broader community, and  provide tangible solutions that support the revitalization of school districts, cities and states.
-        </p>
-        <p class='fadeOn-three'>
-          <strong>
-            Together we can rebuild the future.
-          </strong>
-        </p>
-      </div>
-    </section>
-    <section id='problem'>
-      <div class='bounds'>
-        <h2 class='fadeOn-one-slow'>
-          When neighborhoods suffer,
-          <br>
-          schools fail.
-        </h2>
-        <h2 class='fadeOn-two-slow'>
-          And when schools fail,
-          <br>
-          neighborhoods suffer.
-        </h2>
-      </div>
-      <div class='content-background' data-500='transform:translate3d(0, 0px, 0);' data-top-bottom='transform:translate3d(0, -200px, 0);'></div>
-    </section>
-    <section id='approach-1'>
-      <div class='bounds'>
-        <p class='center'>
-          <strong>
-            To address this cycle, our work focuses on three key areas where economic development and education reform intersect.
-          </strong>
-        </p>
-        <div class='content-row col-ten col-center'>
-          <div class='card'>
-            <div class='icon-gear' data-icon='g'></div>
-            <h4 class='title'>Infrastructure</h4>
-            <p>
-              We believe that rightsizing district building portfolios and providing high quality charter schools with unique financing opportunities can bring more resources to school districts and communities while increasing quality school options for families.
-            </p>
-          </div>
-          <div class='card'>
-            <div class='icon-gear' data-icon='g'></div>
-            <h4 class='title'>Workforce</h4>
-            <p>
-              We believe that smart compensation and pension systems will attract and retain the best teachers to inspire students in struggling schools and contribute to the local economy by living in the neighborhoods in which they teach.
-            </p>
-          </div>
-          <div class='card'>
-            <div class='icon-gear' data-icon='g'></div>
-            <h4 class='title'>Resources</h4>
-            <p>
-              We believe that adequate funding, efficient spending and access to alternative financing can spur innovation and ensure
-              <em>
-                every
-              </em>
-              public school student has the resources they need to succeed.
-            </p>
+        <nav id='cycle-sections' class="show-on-tablet">
+          <div class='icon' data-icon='a' id='next'></div>
+          <a href="#philosophy"></a>
+          <small>learn more</small>
+        </nav>
+        <div class='content-background' data-0='transform:translate3d(0,0%, 0);' data-top-bottom='transform:translate3d(0, 15%, 0);' ></div>
+      </section>
+      <section id='philosophy'>
+        <div class='bounds'>
+          <h1 class='fadeOn-one'>
+            To benefit the children who need help the most,
+            we believe the best solutions must address both concurrently.
+          </h1>
+          <p class='lead fadeOn-two'>EdBuild was created to rethink schools and rebuild communities.</p>
+          <p>
+            Our team focuses on the needs of children in their schools and the broader community, and  provide tangible solutions that support the revitalization of school districts, cities and states.
+          </p>
+          <p class='fadeOn-three'>
+            <strong>
+              Together we can rebuild the future.
+            </strong>
+          </p>
+        </div>
+      </section>
+      <section id='problem'>
+        <div class='bounds'>
+          <h2 class='fadeOn-one-slow'>
+            When neighborhoods suffer,
+            <br>
+            schools fail.
+          </h2>
+          <h2 class='fadeOn-two-slow'>
+            And when schools fail,
+            <br>
+            neighborhoods suffer.
+          </h2>
+        </div>
+        <div class='content-background' data-500='transform:translate3d(0, 0px, 0);' data-top-bottom='transform:translate3d(0, -200px, 0);'></div>
+      </section>
+      <section id='approach-1'>
+        <div class='bounds'>
+          <p class='center'>
+            <strong>
+              To address this cycle, our work focuses on three key areas where economic development and education reform intersect.
+            </strong>
+          </p>
+          <div class='content-row col-ten col-center'>
+            <div class='card'>
+              <div class='icon-gear' data-icon='g'></div>
+              <h4 class='title'>Infrastructure</h4>
+              <p>
+                We believe that rightsizing district building portfolios and providing high quality charter schools with unique financing opportunities can bring more resources to school districts and communities while increasing quality school options for families.
+              </p>
+            </div>
+            <div class='card'>
+              <div class='icon-gear' data-icon='g'></div>
+              <h4 class='title'>Workforce</h4>
+              <p>
+                We believe that smart compensation and pension systems will attract and retain the best teachers to inspire students in struggling schools and contribute to the local economy by living in the neighborhoods in which they teach.
+              </p>
+            </div>
+            <div class='card'>
+              <div class='icon-gear' data-icon='g'></div>
+              <h4 class='title'>Resources</h4>
+              <p>
+                We believe that adequate funding, efficient spending and access to alternative financing can spur innovation and ensure
+                <em>
+                  every
+                </em>
+                public school student has the resources they need to succeed.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id='approach-2'>
-      <div class='bounds'>
-        <p>
-          <strong>
-            Our three-tiered approach will help leaders at every level, from district superintendents to city and state officials.
-          </strong>
-        </p>
-        <hr>
-        <h1>
-          edBuild will:
-        </h1>
-      </div>
-    </section>
-    <section id='approach-3'>
-      <ul class='highlights-list'>
-        <li class='highlight-one'>
-          <div class='icon-container col-one'>
-            <div class='icon' data-icon='h'></div>
-          </div>
-          <div class='copy-container col-eight'>
-            <h1>Drive New Thinking</h1>
-            <p>
-              Through the compilation of data, the encouragement of discourse and debate, and the development of innovative new communications strategies.
-            </p>
-          </div>
-        </li>
-        <li class='highlight-two'>
-          <div class='icon-container col-one'>
-            <div class='icon' data-icon='e'></div>
-          </div>
-          <div class='copy-container col-eight'>
-            <h1>Reveal Pathways for Change</h1>
-            <p>
-              By tracking emerging research, conducting unique independent analysis and partnering with respected peers to support the pursuit of evidence in these areas.
-            </p>
-          </div>
-        </li>
-        <li class='highlight-three'>
-          <div class='icon-container col-one'>
-            <div class='icon' data-icon='f'></div>
-          </div>
-          <div class='copy-container col-eight'>
-            <h1>Implement Innovation</h1>
-            <p>
-              By building actionable data-based models, and guiding stakeholders through the implementation of new and innovative strategies – every step of the way.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section id='contact' role='contentinfo'>
-      <div class='bounds'>
-        <p class='lead fadeUp-one'>
-          <strong>
-            It’s time to rethink schools and reinvest in our communities.
-          </strong>
-        </p>
-        <h1 class='fadeUp-two'>
-          It’s time to rebuild the future.
-        </h1>
-        <div class='logo-wrap fadeOn-three'>
-          <img alt='edbuild' src='../img/logos/logo+@2x.png'>
+      </section>
+      <section id='approach-2'>
+        <div class='bounds'>
+          <p>
+            <strong>
+              Our three-tiered approach will help leaders at every level, from district superintendents to city and state officials.
+            </strong>
+          </p>
+          <hr>
+          <h1>
+            edBuild will:
+          </h1>
         </div>
-        <p>
-          Connect with us at
-          <a href='mailto:contact@edbuild.org'>
-            contact@edbuild.org
-          </a>
-        </p>
-      </div>
-    </section>
+      </section>
+      <section id='approach-3'>
+        <ul class='highlights-list'>
+          <li class='highlight-one'>
+            <div class='icon-container col-one'>
+              <div class='icon' data-icon='h'></div>
+            </div>
+            <div class='copy-container col-eight'>
+              <h1>Drive New Thinking</h1>
+              <p>
+                Through the compilation of data, the encouragement of discourse and debate, and the development of innovative new communications strategies.
+              </p>
+            </div>
+          </li>
+          <li class='highlight-two'>
+            <div class='icon-container col-one'>
+              <div class='icon' data-icon='e'></div>
+            </div>
+            <div class='copy-container col-eight'>
+              <h1>Reveal Pathways for Change</h1>
+              <p>
+                By tracking emerging research, conducting unique independent analysis and partnering with respected peers to support the pursuit of evidence in these areas.
+              </p>
+            </div>
+          </li>
+          <li class='highlight-three'>
+            <div class='icon-container col-one'>
+              <div class='icon' data-icon='f'></div>
+            </div>
+            <div class='copy-container col-eight'>
+              <h1>Implement Innovation</h1>
+              <p>
+                By building actionable data-based models, and guiding stakeholders through the implementation of new and innovative strategies – every step of the way.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id='contact' role='contentinfo'>
+        <div class='bounds'>
+          <p class='lead fadeUp-one'>
+            <strong>
+              It’s time to rethink schools and reinvest in our communities.
+            </strong>
+          </p>
+          <h1 class='fadeUp-two'>
+            It’s time to rebuild the future.
+          </h1>
+          <div class='logo-wrap fadeOn-three'>
+            <img alt='edbuild' src='../img/logos/logo+@2x.png'>
+          </div>
+          <p>
+            Connect with us at
+            <a href='mailto:contact@edbuild.org'>
+              contact@edbuild.org
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
     <!-- / window.jQuery || document.write('<script src="../js/min/jquery.min.js"><\/script>') -->
     <script src='../js/min/sitescripts.min.js'></script>

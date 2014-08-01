@@ -32,148 +32,151 @@
 
     %body.init
 
+        %nav#cycle-sections
+            .icon#prev{:'data-icon'=>'a'}
+            .icon#next{:'data-icon'=>'a'}
+            %small learn more
 
-        %section#question{:'data-0'=>'transform:translate3d(0,0%, 0);', :'data-top-bottom'=>'transform:translate3d(0, 15%, 0);'}
-            .bounds
-                %p.lead Which do we address first?
-                %h1
-                    %span.animate-block-1
-                        poverty
-                    %em.animate-block-2
-                        or
-                    %span.animate-block-3
-                        education
-
-                .scroll-prompt
-                    %small scroll down to learn more
-                    .icon{:'data-icon'=>'a'}
-
-            .content-background
-
-        %section#philosophy
-            .bounds
-                %h1.fadeOn-one
-
-                    To benefit the children who need help the most,
-
-                    we believe the best solutions must address both concurrently.
-
-
-                %p.lead.fadeOn-two EdBuild was created to rethink schools and rebuild communities.
-
-                %p
-                    Our team focuses on the needs of children in their schools and the broader community, and  provide tangible solutions that support the revitalization of school districts, cities and states.
-
-
-                %p.fadeOn-three
-                    %strong
-                        Together we can rebuild the future.
+        %main#main-content
+            %section#question.active_section{:'data-0'=>'transform:translate3d(0,0%, 0);', :'data-top-bottom'=>'transform:translate3d(0, 15%, 0);'}
+                .bounds
+                    %p.lead Which do we address first?
+                    %h1
+                        %span.animate-block-1
+                            poverty
+                        %em.animate-block-2
+                            or
+                        %span.animate-block-3
+                            education
 
 
 
+                .content-background
 
-        %section#problem
-            .bounds
-                %h2.fadeOn-one-slow
-                    When neighborhoods suffer,
-                    %br/
-                    schools fail.
+            %section#philosophy
+                .bounds
+                    %h1.fadeOn-one
 
+                        To benefit the children who need help the most,
 
-                %h2.fadeOn-two-slow
-                    And when schools fail,
-                    %br/
-                    neighborhoods suffer.
-
-            .content-background{:'data-500'=>'transform:translate3d(0, 0px, 0);', :'data-top-bottom'=>'transform:translate3d(0, -200px, 0);'}
+                        we believe the best solutions must address both concurrently.
 
 
-        %section#approach-1
-            .bounds
-                %p.center
-                    %strong
-                        To address this cycle, our work focuses on three key areas where economic development and education reform intersect.
+                    %p.lead.fadeOn-two EdBuild was created to rethink schools and rebuild communities.
 
-                .content-row.col-ten.col-center
-                    .card
-                        .icon-gear{:'data-icon'=>'g'}
-                        %h4.title Infrastructure
-                        %p
-                            We believe that rightsizing district building portfolios and providing high quality charter schools with unique financing opportunities can bring more resources to school districts and communities while increasing quality school options for families.
-
-                    .card
-                        .icon-gear{:'data-icon'=>'g'}
-                        %h4.title Workforce
-                        %p
-                            We believe that smart compensation and pension systems will attract and retain the best teachers to inspire students in struggling schools and contribute to the local economy by living in the neighborhoods in which they teach.
+                    %p
+                        Our team focuses on the needs of children in their schools and the broader community, and  provide tangible solutions that support the revitalization of school districts, cities and states.
 
 
-                    .card
-                        .icon-gear{:'data-icon'=>'g'}
-                        %h4.title Resources
-                        %p
-                            We believe that adequate funding, efficient spending and access to alternative financing can spur innovation and ensure
-                            %em
-                                every
-                            public school student has the resources they need to succeed.
+                    %p.fadeOn-three
+                        %strong
+                            Together we can rebuild the future.
 
 
 
 
-        %section#approach-2
-            .bounds
-                %p
-                    %strong
-                        Our three-tiered approach will help leaders at every level, from district superintendents to city and state officials.
-                %hr/
-                %h1
-                    edBuild will:
+            %section#problem
+                .bounds
+                    %h2.fadeOn-one-slow
+                        When neighborhoods suffer,
+                        %br/
+                        schools fail.
+
+
+                    %h2.fadeOn-two-slow
+                        And when schools fail,
+                        %br/
+                        neighborhoods suffer.
+
+                .content-background{:'data-500'=>'transform:translate3d(0, 0px, 0);', :'data-top-bottom'=>'transform:translate3d(0, -200px, 0);'}
+
+
+            %section#approach-1
+                .bounds
+                    %p.center
+                        %strong
+                            To address this cycle, our work focuses on three key areas where economic development and education reform intersect.
+
+                    .content-row.col-ten.col-center
+                        .card
+                            .icon-gear{:'data-icon'=>'g'}
+                            %h4.title Infrastructure
+                            %p
+                                We believe that rightsizing district building portfolios and providing high quality charter schools with unique financing opportunities can bring more resources to school districts and communities while increasing quality school options for families.
+
+                        .card
+                            .icon-gear{:'data-icon'=>'g'}
+                            %h4.title Workforce
+                            %p
+                                We believe that smart compensation and pension systems will attract and retain the best teachers to inspire students in struggling schools and contribute to the local economy by living in the neighborhoods in which they teach.
+
+
+                        .card
+                            .icon-gear{:'data-icon'=>'g'}
+                            %h4.title Resources
+                            %p
+                                We believe that adequate funding, efficient spending and access to alternative financing can spur innovation and ensure
+                                %em
+                                    every
+                                public school student has the resources they need to succeed.
 
 
 
-        %section#approach-3
 
-            %ul.highlights-list
-                %li.highlight-one
-                    .icon-container.col-one
-                        .icon{:'data-icon'=>'h'}
-                    .copy-container.col-eight
-                        %h1 Drive New Thinking
-                        %p
-                            Through the compilation of data, the encouragement of discourse and debate, and the development of innovative new communications strategies.
-
-                %li.highlight-two
-                    .icon-container.col-one
-                        .icon{:'data-icon'=>'e'}
-                    .copy-container.col-eight
-                        %h1 Reveal Pathways for Change
-                        %p
-                            By tracking emerging research, conducting unique independent analysis and partnering with respected peers to support the pursuit of evidence in these areas.
-                %li.highlight-three
-                    .icon-container.col-one
-                        .icon{:'data-icon'=>'f'}
-                    .copy-container.col-eight
-                        %h1 Implement Innovation
-                        %p
-                            By building actionable data-based models, and guiding stakeholders through the implementation of new and innovative strategies – every step of the way.
+            %section#approach-2
+                .bounds
+                    %p
+                        %strong
+                            Our three-tiered approach will help leaders at every level, from district superintendents to city and state officials.
+                    %hr/
+                    %h1
+                        edBuild will:
 
 
-        %section#contact{:role => "contentinfo"}
-            .bounds
-                %p.lead.fadeUp-one
-                    %strong
-                        It’s time to rethink schools and reinvest in our communities.
 
-                %h1.fadeUp-two
-                    It’s time to rebuild the future.
-                .logo-wrap.fadeOn-three
-                    %img{:src => "../img/logos/logo+@2x.png", :alt => "edbuild"}/
+            %section#approach-3
+
+                %ul.highlights-list
+                    %li.highlight-one
+                        .icon-container.col-one
+                            .icon{:'data-icon'=>'h'}
+                        .copy-container.col-eight
+                            %h1 Drive New Thinking
+                            %p
+                                Through the compilation of data, the encouragement of discourse and debate, and the development of innovative new communications strategies.
+
+                    %li.highlight-two
+                        .icon-container.col-one
+                            .icon{:'data-icon'=>'e'}
+                        .copy-container.col-eight
+                            %h1 Reveal Pathways for Change
+                            %p
+                                By tracking emerging research, conducting unique independent analysis and partnering with respected peers to support the pursuit of evidence in these areas.
+                    %li.highlight-three
+                        .icon-container.col-one
+                            .icon{:'data-icon'=>'f'}
+                        .copy-container.col-eight
+                            %h1 Implement Innovation
+                            %p
+                                By building actionable data-based models, and guiding stakeholders through the implementation of new and innovative strategies – every step of the way.
 
 
-                %p
-                    Connect with us at
-                    %a{:href => "mailto:contact@edbuild.org"}
-                        contact@edbuild.org
+            %section#contact{:role => "contentinfo"}
+                .bounds
+                    %p.lead.fadeUp-one
+                        %strong
+                            It’s time to rethink schools and reinvest in our communities.
+
+                    %h1.fadeUp-two
+                        It’s time to rebuild the future.
+                    .logo-wrap.fadeOn-three
+                        %img{:src => "../img/logos/logo+@2x.png", :alt => "edbuild"}/
+
+
+                    %p
+                        Connect with us at
+                        %a{:href => "mailto:contact@edbuild.org"}
+                            contact@edbuild.org
 
 
 

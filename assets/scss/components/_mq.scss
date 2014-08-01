@@ -6,32 +6,16 @@
 // 1176
 /////////////////////////////////////////////////////////
 @include media($adjust-background-size) {
-    // Section
-    section {
-        height: auto !important;
-        min-height: inherit !important;
-    }
-
     // Problem
     section#problem {
         background-size: inherit;
-        min-height: inherit;
         padding-bottom: 8em;
     }
 
 }
 
 
-// LANDSCAPE
-/////////////////////////////////////////////////////////
-// @include media($ipad-landscape-down) {
-//     h4 {
-//         font-size: 1em;
-//     }
-// }
-
-
-// // ADJUST GRID/TYPE
+// ADJUST GRID/TYPE
 // /////////////////////////////////////////////////////////
 @include media($adjust-grid-down) {
     // Cards
@@ -67,10 +51,63 @@
     }
 }
 
+// LANDSCAPE
+/////////////////////////////////////////////////////////
+@include media($ipad-landscape-down) {
+    // Prompt
+    #cycle-sections.hide-on-tablet {
+        display: none;
+    }
+    #cycle-sections.show-on-tablet{
+        position: inherit;
+        display: inherit;
+        margin: 20em auto 0;
+        left: 0;
+    }
+}
+
+// TOUCH
+//////////////////////////////////////////
+.touch {
+    // Fades
+    .fadeOn-one,
+    .fadeOn-two,
+    .fadeOn-three,
+    .fadeOn-one-slow,
+    .fadeOn-two-slow,
+    .fadeUp-one,
+    .fadeUp-two{
+      @include opacity(1);
+      @include transform(none);
+    }
+    // Prompt - repeat for good measure
+    #cycle-sections.hide-on-tablet {
+        display: none;
+    }
+    #cycle-sections.show-on-tablet{
+        position: inherit;
+        display: inherit;
+        margin: 20em auto 0;
+        left: 0;
+    }
+}
+
+
 
 // PORTRAIT
 /////////////////////////////////////////////////////////
 @include media($ipad-portrait-down) {
+
+    // Prompt
+    #cycle-sections.show-on-tablet{
+        margin: 4em auto 0;
+    }
+
+    // Section
+    section {
+        height: auto !important;
+        min-height: inherit !important;
+    }
 
     // Utility Hide/Show
     .hide-on-tablet {
@@ -113,10 +150,16 @@
     }
 
     // Question
-    section#question h1 em {
-        display: block;
-        margin: 1em auto .5em;
+    section#question {
+        h1 em {
+            display: block;
+            margin: 1em auto .5em;
+        }
+        .content-background {
+            min-height: inherit;
+        }
     }
+
 
     // Utility Grid
     .col-one,
@@ -139,19 +182,6 @@
 
 }
 
-// TOUCH
-//////////////////////////////////////////
-.touch {
-    // Fades
-    .fadeUp-one,
-    .fadeUp-two,
-    .fadeOn-one,
-    .fadeOn-two,
-    .fadeOn-three{
-      @include opacity(1);
-    }
-}
-
 
 @include media($phone-down) {
     // Cards
@@ -164,17 +194,22 @@
         padding:3em .5em 3em;
     }
 
+    // Logo
+    section#contact .logo-wrap {
+        width: 250px;
+    }
     // Question
     section#question {
         h1 em {
             padding-bottom:0;
         }
-        .scroll-prompt {
-            margin-top: 4em;
-        }
+
         .content-background {
             min-height: inherit;
         }
+    }
+    .touch #cycle-sections {
+        margin-top: 4em !important;
     }
 
     // Problem
