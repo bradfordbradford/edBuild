@@ -146,7 +146,8 @@ section#question {
 
     .content-background {
         @include transition(opacity .3s ease-in-out);
-        background: url('../img/content/desk.jpg') no-repeat top center;
+        // background: url('../img/content/desk.jpg') no-repeat top center;
+        background: url('../img/content/desk_1600x1067.jpg') no-repeat 0 center;
         background-size: cover;
         min-height: 700px;
         position: absolute;
