@@ -14,14 +14,14 @@
     <script src='../js/min/modernizr.min.js'></script>
   </head>
   <body class='init'>
-    <nav id='cycle-sections' class="hide-on-tablet">
+    <nav id='cycle-sections'>
       <div class='icon' data-icon='a' id='prev'></div>
       <div class='icon' data-icon='a' id='next'></div>
-      <small>learn more</small>
+      <small>Click here to learn more</small>
     </nav>
     <main id='main-content'>
-      <section class='active_section' id='question'>
-        <div class='bounds' data-0='opacity:1' data-top-bottom='opacity:0' >
+      <section class='active_section' data-0='transform:translate3d(0,0%, 0);' data-top-bottom='transform:translate3d(0, 15%, 0);' id='question'>
+        <div class='bounds'>
           <p class='lead'>Which do we address first?</p>
           <h1>
             <span class='animate-block-1'>
@@ -35,12 +35,7 @@
             </span>
           </h1>
         </div>
-        <nav id='cycle-sections' class="show-on-tablet">
-          <div class='icon' data-icon='a' id='next'></div>
-          <a href="#philosophy"></a>
-          <small>learn more</small>
-        </nav>
-        <div class='content-background' data-0='transform:translate3d(0,0%, 0);' data-top-bottom='transform:translate3d(0, 15%, 0);' ></div>
+        <div class='content-background'></div>
       </section>
       <section id='philosophy'>
         <div class='bounds'>
